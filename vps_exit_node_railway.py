@@ -90,8 +90,7 @@ _MAX_RESPONSE_BODY = 64 * 1024 * 1024
 _OUTBOUND_TIMEOUT = 30
 
 # Pre-shared key loaded at startup.
-_PSK: str = "94b1b2231eac01e772eb2de1e59fb00e59221473750a333bdacf35593bbb94a7"
-
+_PSK:str = (args.psk or os.environ.get("EXIT_NODE_PSK", "")).strip()
 # ---------------------------------------------------------------------------
 # Helpers
 # ---------------------------------------------------------------------------
